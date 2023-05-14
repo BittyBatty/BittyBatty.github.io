@@ -107,6 +107,22 @@ section::after {
   clear: both;
 }
 
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
 /* Style the footer */
 footer {
   position: fixed;
@@ -156,8 +172,10 @@ footer {
   
   <article>
 		<div class="content">
-		<p><b>What is an Ukagaka?</b>
+		<button type="button" class="collapsible">What is an Ukagaka?</button>
+		<div class="content">
 		<p>A Ukagaka, or ghost, is a desktop widget usually of a character that the user can interact with in a variety of different ways. There are a wide range of interactions that can be done with these characters, but the most common interactions include giving them gifts, asking them questions, dressing them up, and petting them.
+		</div>
 		<p>
 		<p><b>What is a balloon?</b>
 		<p>A balloon is the box that dialogue appears in and is also what the left-click menu appears in as well. These are stylized and often customized for each individual ghost and it's highly recommended you download them as well.
@@ -321,6 +339,23 @@ footer {
 <<footer>
   <p><a href="https://www.etsy.com/shop/BittyBattyArt?ref=simple-shop-header-name&listing_id=1352461387" target="_blank"><u>My Etsy</u></a></p>
 </footer>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
