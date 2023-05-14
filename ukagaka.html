@@ -179,20 +179,20 @@ footer {
   
   <article>
 		<div class="content">
-		<button type="button" class="collapsible">+ What is an Ukagaka?</button>
-		<div class="collapsecontent">
+			<button type="button" class="collapsible">+ What is an Ukagaka?</button>
+			<div class="collapsecontent">
 			<p>A Ukagaka, or ghost, is a desktop widget usually of a character that the user can interact with in a variety of different ways. There are a wide range of interactions that can be done with these characters, but the most common interactions include giving them gifts, asking them questions, dressing them up, and petting them.
-		</div>
+			</div>
 		<p>
-		<button type="button" class="collapsible">+ What is a balloon?</button>
-		<div class="collapsecontent">
+			<button type="button" class="collapsible">+ What is a balloon?</button>
+			<div class="collapsecontent">
 			<p>A balloon is the box that dialogue appears in and is also what the left-click menu appears in as well. These are stylized and often customized for each individual ghost and it's highly recommended you download them as well.</p>
-		</div> 
+			</div> 
 		<p>
-		<button type="button" class="collapsible">+ How do I use the ghosts and balloons?</button>
-		<div class="collapsecontent">
+			<button type="button" class="collapsible">+ How do I use the ghosts and balloons?</button>
+			<div class="collapsecontent">
 			<p>The very first thing you'll need to do to download any of the below Ukagakas is download a program called <a href="http://ssp.shillest.net/" target="_blank"><u>SSP</u></a> for Windows. You'll see a large pink button on the left with a lot of Japanese on it and in tiny letters "complete install package". You'll want to click this and install it. After you've successfully installed them, a character will appear named Emily. At this point, you can drag the .nar files of my ghosts and their balloons below onto Emily and she will install them. Afterwards, right click Emily, go to the 'change ghost' option in the menu that pulls up, and switch to the ghost of your choosing.</p>
-		</div> 
+			</div> 
 		</div>
 		
 		<div class="column">
@@ -358,11 +358,11 @@ var i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    var collapsecontent = this.nextElementSibling;
+    if (collapsecontent.style.display === "block") {
+      collapsecontent.style.display = "none";
     } else {
-      content.style.display = "block";
+      collapsecontent.style.display = "block";
     }
   });
 }
