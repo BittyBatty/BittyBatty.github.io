@@ -65,6 +65,15 @@ nav ul {
   padding: 0;
 }
 
+article {
+  float: left;
+  padding: 10px;
+  width: 80%;
+  background-color: #2E4F4F;
+  padding: 5px
+  margin-bottom: 50px
+}
+
 .row {
   margin: 10px -16px;
 }
@@ -125,7 +134,7 @@ nav ul {
 <h1>BittyBatty's Art Shop</h1>
 </header>
 
-  <nav>
+ <nav>
     <ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="Shop.html">My Shop</a></li>
@@ -133,8 +142,9 @@ nav ul {
 		<li><a href="writing.html">Writing</a></li>
 		<li><a href="ukagaka.html">Ukagakas</a></li>
     </ul>
-  </nav>
+ </nav>
 
+<article>
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('prints')"> Prints</button>
@@ -218,6 +228,7 @@ nav ul {
   </div>
 <!-- END GRID -->
 </div>
+</article>
 
 <script>
 filterSelection("all")
