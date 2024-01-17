@@ -39,6 +39,32 @@ header {
   color: #CBE4DE;
 }
 
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background: #333b3b;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: #CBE4DE;
+}
+
+a:link, a:visited {
+  color: #CBE4DE;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .row {
   margin: 10px -16px;
 }
@@ -99,7 +125,15 @@ header {
 <h1>BittyBatty's Art Shop</h1>
 </header>
 
-<hr>
+  <nav>
+    <ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Shop.html">My Shop</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="writing.html">Writing</a></li>
+		<li><a href="ukagaka.html">Ukagakas</a></li>
+    </ul>
+  </nav>
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
