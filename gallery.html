@@ -144,6 +144,11 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+/* Divider line */
+hr.solid {
+  border-top: 3px solid #806b24;
+}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
@@ -181,7 +186,9 @@ footer {
   </nav>
   
 	<article>
-	<div class="content"><p><b><center>My current favorite pieces!</center></b></p></div>
+	<div class="content"><p><hr class="solid"></p>
+	<p><b><center>My current favorite pieces!</center></b></p>
+	<p><hr class="solid"></p></div>
 		<div class="gallery">
 		<img src="Art/Alayne.png" alt="The regal, vampire queen Alayne seated in the palace">
 		</a>
