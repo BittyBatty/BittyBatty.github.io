@@ -27,6 +27,21 @@ header {
   color: #54478d;
 }
 
+/*Gets header text over image*/
+.container {
+  position: relative;
+  text-align: center;
+  color: #5c4f99;
+}
+
+/*Centers header text*/
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
@@ -171,7 +186,10 @@ hr.solid {
 
 
 <header>
-  <h2>BittyBatty's Ukagakas/Ghosts</h2>
+	<div class="container">
+		<img src="WebHeader.png" alt="My header Bigger">
+		<div class="centered"><h2>Ukagakas</h2></div>
+	</div>
 </header>
 
 <section>
