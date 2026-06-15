@@ -20,57 +20,95 @@ body {
 
 .content {
   float: left;
-  padding: 5px;
-  background-color:  #5c4f99;
+  padding: 10px;
+  background-color: #5c4f99;
 }
 
 /* Style the header */
 header {
   background-color: #7b337d;
-  padding: 10px;
-  text-align: center;
-  font-size: 60px;
-  color: #7b337d;
+  text-align: left;
+  font-size: 14px;
+  color: #210535;
 }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
+/* Scrolling Text */
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ color: #210535;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+/* Add a color to the top navigation */
+.topnav {
+  background-color: #210535;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
   float: left;
-  width: 20%;
-  height: 100%;
-  background: #5c4f99;
-  padding: 20px;
+  display: block;
+  color: #f5d5e0;
   text-align: center;
-  font-size: 25px;
-  color: #7b337d;
-}
-
-a:link, a:visited {
-  color: #CBE4DE;
-  padding: 10px 15px;
-  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-block;
+  font-size: 17px;
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #f5d5e0;
+  color: #210535;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
   color: white;
 }
 
-article {
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+  color: #f5d5e0;
+}
+
+.column {
   float: left;
-  padding: 10px;
-  width: 80%;
-  background-color: #210535;
-  padding: 5px
-  margin-bottom: 50px
+  padding: 10px
 }
 
 /* Clear floats after the columns */
-section::after {
+.row:after {
   content: "";
   display: table;
   clear: both;
@@ -89,45 +127,10 @@ footer {
   text-align: center;
 }
 
-.contact{
-  background-color: #f4e7bd;
-  border: none;
-  margin: 5px;
-  color: #7b337d;
-  padding: 10px;
-  font-size: 15px;
-  overflow-wrap: break-word;
+.fa {
+	color: #f5d5e0;
+	padding: 2px;
 }
-
-/*Gets header text over image*/
-.container {
-  position: relative;
-  text-align: center;
-  color: #5c4f99;
-}
-
-/*Centers header text*/
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
- /* Style buttons to link to where to read*/
-.btn {
-  background-color: #f4e7bd;
-  border: none;
-  color: #c874b2;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: #dac787;
-} 
 
 /* Divider line */
 hr.solid {
@@ -148,39 +151,39 @@ hr.solid {
 
 
 <header>
-	<div class="container">
-		<div class="centered"><h5>Writing</h5></div>
-	</div>
+		<img src="LogoSmall.png" alt="Logo" style="height:50px;float:left;"> 
+			<div class="scroll-left">
+				<p>☆ MY NOVEL "LUCK'S DARK TWIST" IS IN THE EDITING STAGE ☆ MY NEXT CONVENTION IS BELL COUNTY COMIC CON ☆ I GOT A VGEN ACCOUNT ☆ I AM PARTICIPATING IN ART FIGHT 2026</p>
+			</div>
 </header>
 
 <section>
-  <nav>
-    <ul>
-		<li><a href="index.html">✧Home✧</a></li>
-		<li><a href="writing.html">✧Writing✧</a></li>
-		<li><a href="ukagaka.html">✧Ukagakas✧</a></li>
-    </ul>
-		<div class="contact">
-			<h1><p><b>Commissions are: <u>OPEN</u></b></h1>
-		</div>
-  </nav>
+  <div class="topnav">
+		<a href="index.html">☆Home☆</a>
+		<a href="writing.html">☆Writing☆</a>
+		<a href="ukagaka.html">☆Ukagakas☆</a>
+		<a href="https://vgen.co/BittyBattyArt">☆Vgen Commissions☆</a>
+  </div>
+ </section>
   
-	<article>
+<section>
     <div class="content">
 		<center><img src="In the Dark.png" alt="Book Cover" style="width:25%; border:5px solid #f4e7bd; padding:2px; margin:10px;" align=left>
 		<p><hr class="solid"></p>
-		<p><h1>✧･ﾟ: *✧･ﾟ:* IN THE DARK *:･ﾟ✧*:･ﾟ✧</h1></center>
+		<p><h1>･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───Luck's Dark Twist─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ.</h1></center>
 		<p><hr class="solid"></p>
-		<p><center><a href="https://www.wattpad.com/story/361463967-in-the-dark">
-				<button class="btn" style="width:100%"></i> Read on Wattpad</button></a><a href="https://www.royalroad.com/fiction/80838/in-the-dark">
-				<button class="btn" style="width:100%"></i> Read on Royal Road</button></a></center></p>
-		<p>In a world torn apart and damaged by war, Leonardo Dupont is one of the last surviving members of the fae - a race hunted near to extinction by vampires who have coveted them for the unique properties of their blood. In a most unlucky twist of fate, Leon falls into the clutches of the vampire prince, Riccardo Tenepri, and believes his life has ended.</p>
+		<p><center><a href="">
+				<button class="btn" style="width:100%"></i> COMING SOON</button></a></center>
+		<center><p>One lost fae in a darkened world.</p>
+		<p>A vampire prince longing for peace.</p>
+		<p>And the journey that could change everything.</p>
+		<p>─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p></center>
+		<p>Leonardo Dupont is one of the last fae to survive the centuries-long extermination of his people led by vampires. When he's captured and gifted to the Tenepri heir as a trophy, Leon expects on cruelty. However, Prince Riccardo Tenepri is nothing like the monsters who came before him. Quiet, gentle, and desperate to escape the violence of his family's legacy, he sees Leon not as a prize, but as someone worth saving.</p>
 		<p>
-		<p>Prince Riccardo - trained as a soldier in his family's millennia long war for dominance over the world - glimpses hope when he is gifted Leon. He dreams of a more peaceful existence for himself and his kid brother, Erik; the fae's home promises him just what he's always wanted. Defying his ruthless father, and turning his back on everything he was raised to be, Riccardo sets out on a journey with Erik in tow to get Leon back to his family whilst seeking a better life for himself and Erik.</p> 
+		<p>Riccardo's father, King Demetri, has darker plans. Leon's blood carries power enough to create a new breed of unstoppable vampire soldier, and he'll tear the world apart to possess it. With the king's ruthless enforcer on their trail, Riccardo and Leon flee the only life the prince has ever known.</p> 
 		<p>
-		<p>With the relentless King Demetri pursuing them, Leon and Riccardo must depend on each other to reach journey's end. As the history of violence between fae and vampires hangs in the air, their quest becomes not only a fight for survival but a chance at redemption in a world scarred by conflict.</p>
+		<p>But even if it costs him everything, Riccardo has sworn to get Leon home. Should he fail, Leon will become a weapon of war, and Riccardo will be killed for treason against the crown.</p>
 	</div>
-  </article>
 </section>
 
 <footer>
