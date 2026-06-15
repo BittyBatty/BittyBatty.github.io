@@ -18,54 +18,81 @@ body {
   color: #CBE4DE;
 }
 
+.content {
+  float: left;
+  padding: 10px;
+  background-color: #5c4f99;
+}
+
 /* Style the header */
 header {
   background-color: #7b337d;
-  padding: 10px;
-  text-align: center;
-  font-size: 35px;
-  color: #7b337d;
+  text-align: left;
+  font-size: 14px;
+  color: #210535;
 }
 
-/*Gets header text over image*/
-.container {
-  position: relative;
-  text-align: center;
-  color: #5c4f99;
+/* Scrolling Text */
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ color: #210535;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
 }
 
-/*Centers header text*/
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Add a color to the top navigation */
+.topnav {
+  background-color: #210535;
+  overflow: hidden;
 }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
+/* Style the links inside the navigation bar */
+.topnav a {
   float: left;
-  width: 20%;
-  height: 100%;
-  background: #5c4f99;
-  padding: 20px;
+  display: block;
+  color: #f5d5e0;
   text-align: center;
-  font-size: 25px;
-  color: #7b337d;
-}
-
-a:link, a:visited {
-  color: #deca89;
-  padding: 15px 25px;
-  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-block;
+  font-size: 17px;
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #f5d5e0;
+  color: #210535;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
 
 article {
@@ -92,7 +119,7 @@ article {
 }
 
 .webring{
-  background-color: #f4e7bd;
+  background-color: #f5d5e0;
   border: none;
   color: #7b337d;
   padding: 10px;
@@ -101,7 +128,7 @@ article {
 
  /* Style buttons */
 .btn {
-  background-color: #f4e7bd;
+  background-color: #f5d5e0;
   border: none;
   color: #7b337d;
   padding: 12px;
@@ -122,7 +149,7 @@ section::after {
 }
 
 .collapsible {
-  background-color: #f4e7bd;
+  background-color: #f5d5e0;
   color: #deca89;
   cursor: pointer;
   padding: 18px;
@@ -141,7 +168,7 @@ section::after {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f4e7bd;
+  background-color: #f5d5e0;
 }
 
 /* Style the footer */
@@ -158,13 +185,18 @@ footer {
 }
 
 .contact{
-  background-color: #f4e7bd;
+  background-color: #f5d5e0;
   border: none;
   margin: 5px;
   color: #7b337d;
   padding: 10px;
   font-size: 15px;
   overflow-wrap: break-word;
+}
+
+.fa {
+	color: #f5d5e0;
+	padding: 2px;
 }
 
 /* Divider line */
